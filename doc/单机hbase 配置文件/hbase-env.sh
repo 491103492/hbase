@@ -29,6 +29,7 @@ export JAVA_HOME=/Users/m687017/mysoft/jdk1.8.0_471.jdk/Contents/Home
 
 # Extra Java CLASSPATH elements.  Optional.
 export HBASE_CLASSPATH=$HADOOP_HOME/etc/hadoop
+export HADOOP_CONF_DIR=/Users/m687017/mysoft/hadoop/etc/hadoop
 
 # The maximum amount of heap to use. Default is left to JVM default.
 # export HBASE_HEAPSIZE=1G
@@ -41,7 +42,7 @@ export HBASE_CLASSPATH=$HADOOP_HOME/etc/hadoop
 # Default settings are applied according to the detected JVM version. Override these default
 # settings by specifying a value here. For more details on possible settings,
 # see http://hbase.apache.org/book.html#_jvm_tuning
-# export HBASE_OPTS
+export HBASE_OPTS="$HBASE_OPTS -Djava.net.preferIPv4Stack=true"
 
 # Uncomment one of the below three options to enable java garbage collection logging for the server-side processes.
 
